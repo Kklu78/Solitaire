@@ -1,0 +1,43 @@
+body {
+  max-width: 600px;
+  max-height: 600px;
+  background-color: green;
+}
+
+.toprow {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.tableau {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  column-gap: -50px;
+}
+
+.center {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: absolute;
+  top: 70%;
+  right: 50%;
+
+
+}
+
+.spacer {
+  width: 64px;
+  height: 88px;
+  margin: 5px 5px 50px 5px;
+  box-sizing: border-box;
+  display: inline-block;
+
+}
