@@ -13,14 +13,23 @@
 <body>
     <div class='toprow'>
         <span class="card back-blue" id='deck'></span>
-        <span class="card" id='waste'></span>
+        <div class='stack' id='waste'>
+            <span class="card"></span>
+        </div>
         <span class="spacer"></span>
-        <span class="card" id='foundation1'></span>
-        <span class="card" id='foundation2'></span>
-        <span class="card" id='foundation3'></span>
-        <span class="card" id='foundation4'></span>
-
-    </div>
+        <div class='stack' id='foundation1' ondrop="drop(event)" ondragover="allowDrop(event)">
+            <span class="card"></span>
+        </div>
+        <div class='stack' id='foundation2' ondrop="drop(event)" ondragover="allowDrop(event)">
+            <span class="card"></span>
+        </div>
+        <div class='stack' id='foundation3' ondrop="drop(event)" ondragover="allowDrop(event)">
+            <span class="card"></span>
+        </div>
+        <div class='stack' id='foundation4' ondrop="drop(event)" ondragover="allowDrop(event)">
+            <span class="card"></span>
+        </div>
+      </div>
     <div class='tableau'>
         <div class='stack' id='tableau1'>
             <span class="card"></span>
@@ -46,7 +55,9 @@
     </div>
     <div class='bottom'>
         <div class='center'>
-            <button type="button" class="New Game">New Game</button>
+            <button type="button" class="newGame">New Game</button>
+            <button type="button" class="winGame">Win Game</button>
+
         </div>
     </div>
     
