@@ -6,61 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="css/cardstarter.css" rel="stylesheet" type="text/css" />
+    <link href="css/cardstarter-classic.css" rel="stylesheet" type="text/css" id='theme'/>
 
     <script defer src="main.js"></script>
 </head>
 <body>
-    <div class='toprow'>
-        <span class="card back-blue" id='deck'></span>
-        <div class='stack' id='waste'>
-            <span class="card"></span>
+    <div class="content">
+        <div class='toprow'>
+            <span class="card back-blue" id='deck'></span>
+            <div class='stack' id='waste'>
+                <span class="card"></span>
+            </div>
+            <span class="spacer"></span>
+            <div class='stack' id='foundation1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='foundation2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='foundation3' ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='foundation4' ondrop="drop(event)" ondragover="allowDrop(event)">
+                <span class="card"></span>
+            </div>
         </div>
-        <span class="spacer"></span>
-        <div class='stack' id='foundation1' ondrop="drop(event)" ondragover="allowDrop(event)">
-            <span class="card"></span>
+        <div class='tableau'>
+            <div class='stack' id='tableau1'>
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='tableau2'>
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='tableau3'>
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='tableau4'>
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='tableau5'>
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='tableau6'>
+                <span class="card"></span>
+            </div>
+            <div class='stack' id='tableau7'>
+                <span class="card"></span>
+            </div>
         </div>
-        <div class='stack' id='foundation2' ondrop="drop(event)" ondragover="allowDrop(event)">
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='foundation3' ondrop="drop(event)" ondragover="allowDrop(event)">
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='foundation4' ondrop="drop(event)" ondragover="allowDrop(event)">
-            <span class="card"></span>
-        </div>
-      </div>
-    <div class='tableau'>
-        <div class='stack' id='tableau1'>
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='tableau2'>
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='tableau3'>
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='tableau4'>
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='tableau5'>
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='tableau6'>
-            <span class="card"></span>
-        </div>
-        <div class='stack' id='tableau7'>
-            <span class="card"></span>
-        </div>
-    </div>
-    <div class='bottom'>
-        <div class='center'>
-            <button type="button" class="newGame">New Game</button>
-            <button type="button" class="winGame">Win Game</button>
+        <div class='bottom'>
+            <div class='game'>
+                <button type="button" class="btn newGame">New Game</button>
+                <button type="button" class="btn winGame">Win Game</button>
 
+            </div>
+            <div class='themes'>
+                <button type="button" onclick="changeTheme('classic')">Classic</button>
+                <button type="button" onclick="changeTheme('pokemon')">Pokemon</button>
+                <button type="button" onclick="changeTheme('alice')">Alice in Wonderland</button>
+                <button type="button" onclick="changeTheme('space')">Space</button>
+
+            </div>
         </div>
     </div>
-    
     
 </body>
 </html>

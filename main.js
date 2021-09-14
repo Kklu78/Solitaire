@@ -69,6 +69,8 @@ function renderBoard(){
     revealTopCards();
     renderStack()
     renderPiles()
+    limitBoard()
+    winCondition()
 
 }
 
@@ -120,6 +122,12 @@ function renderPiles() {
     } else {document.querySelector('#deck').classList = 'card outline'}
 
     
+}
+
+function limitBoard(){
+    document.querySelector('html').style.width = '600px'
+    document.querySelector('html').style.height = '600px'
+
 }
 
 //deck functions
@@ -216,7 +224,7 @@ function drop(ev) {
             renderBoard();
         }
 //waste to tableau with cards
-    } else if (dragParent.includes('waste') && dropParent.includes('tableau')) {
+    } else if (dragParent.includes('waste') && dropParent.includes('tableau') && cardsInTableau[dropParent].length > 0) {
         const dropIndex = cardsInTableau[dropParent].findIndex(card => card.class === ev.target.classList[1])
         if (checkLegalTableau(returnCard(dragParent,dragIndex),returnCard(dropParent,dropIndex))){
             splice = cardsInWaste.splice(dragIndex, cardsInWaste.length-dragIndex)
@@ -240,7 +248,7 @@ function drop(ev) {
             renderBoard();
         }
 //foundation to tableau
-    } else if (dragParent.includes('foundation') && dropParent.includes('tableau')) {
+    } else if (dragParent.includes('foundation') && dropParent.includes('tableau') && cardsInTableau[dropParent].length > 0) {
         const dropIndex = cardsInTableau[dropParent].findIndex(card => card.class === ev.target.classList[1])
         if (checkLegalTableau(returnCard(dragParent,dragIndex),returnCard(dropParent,dropIndex))){
             splice = cardsInFoundation[dragParent].splice(dragIndex, cardsInFoundation[dragParent].length-dragIndex)
@@ -303,7 +311,41 @@ function winCondition() {
 }
 
 function winGame() {
+    deck = []
+    cardsInWaste = [];
+    generateDeck();
+    cardsInFoundation = {
+        foundation1:[],
+        foundation2:[],
+        foundation3:[],
+        foundation4:[]
+    }
+    cardsInTableau = {
+        tableau1:[],
+        tableau2:[],
+        tableau3:[],
+        tableau4:[],
+        tableau5:[],
+        tableau6:[],
+        tableau7:[]
+    }
+    for (found in cardsInFoundation) {cardsInFoundation[found] = deck.splice(0,13)}
+    renderBoard()
 
+
+
+}
+
+//Theme Functions
+
+function changeTheme(value) {
+  
+    let sheetsEl = document
+        .getElementsByTagName('link');
+
+    sheetsEl[1].href = `css/cardstarter-${value}.css`;
+
+    document.querySelector('body').style.backgroundImage = `url("./images/backgrounds/${value}.jpeg")`
 }
 
 init()
