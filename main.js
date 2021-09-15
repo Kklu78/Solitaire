@@ -56,6 +56,8 @@ function init(){
         tableau6:[],
         tableau7:[]
     }
+    document.querySelector('.win').style.opacity = '0'
+
     generateDeck();
     shuffleDeck();
     distributeDeck();
@@ -81,7 +83,7 @@ function renderStack(){
             tempHTML = `\n <span class='card outline' ondrop="drop(event)" ondragover="allowDrop(event)"></span>`
         } else {
             for (let i = 0; i < Number(cardsInTableau[stack].length); i++) {
-                tempHTML += `\n <span class='card ${cardsInTableau[stack][i].revealed ? `${cardsInTableau[stack][i].class}' draggable='true'  ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"`  : 'back-blue'}' style='position: relative; top: ${-128*i}px; z-index: ${i};' '></span>`
+                tempHTML += `\n <span class='card ${cardsInTableau[stack][i].revealed ? `${cardsInTableau[stack][i].class} revealed' draggable='true'  ondragstart="drag(event)" ondrop="drop(event)" ondragover="allowDrop(event)"`  : 'back-blue'}' style='position: relative; top: ${-128*i}px; z-index: ${i};' '></span>`
             }
         }
         document.querySelector(`#${stack}`).innerHTML = tempHTML
@@ -103,7 +105,7 @@ function revealTopCards() {
 
 function renderPiles() {
     if (cardsInWaste.length > 0) {
-        document.querySelector('#waste').innerHTML = `<span class='card ${cardsInWaste[cardsInWaste.length-1].class}' draggable='true'  ondragstart="drag(event)"></span>`
+        document.querySelector('#waste').innerHTML = `<span class='card ${cardsInWaste[cardsInWaste.length-1].class} revealed' draggable='true'  ondragstart="drag(event)"></span>`
 
     } else {
         document.querySelector('#waste').firstElementChild.classList = 'card outline'
@@ -111,9 +113,9 @@ function renderPiles() {
 
     for (pile in cardsInFoundation) {
         if (cardsInFoundation[pile].length > 0) {
-            document.querySelector(`#${pile}`).innerHTML = `<span class='card ${cardsInFoundation[pile][cardsInFoundation[pile].length-1].class}' draggable='true'  ondragstart="drag(event)"></span>`
+            document.querySelector(`#${pile}`).innerHTML = `<span class='card ${cardsInFoundation[pile][cardsInFoundation[pile].length-1].class} revealed' draggable='true'  ondragstart="drag(event)"></span>`
         } else {
-            document.querySelector(`#${pile}`).firstElementChild.classList = 'card outline'
+            document.querySelector(`#${pile}`).innerHTML = `\n <span class='card outline' ondrop="drop(event)" ondragover="allowDrop(event)"></span>`
         }
     }
 
@@ -306,7 +308,7 @@ function checkLegalTableauInit(card1) {
 
 function winCondition() {
     if (Object.values(cardsInFoundation).every(f => f.length === 13)) {
-        console.log('you win!!')
+        document.querySelector('.win').style.opacity = '1'
     }
 }
 
@@ -346,6 +348,7 @@ function changeTheme(value) {
     sheetsEl[1].href = `css/cardstarter-${value}.css`;
 
     document.querySelector('body').style.backgroundImage = `url("./images/backgrounds/${value}.jpeg")`
+
 }
 
 init()

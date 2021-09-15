@@ -1,13 +1,10 @@
 body {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(8, 123, 31);
-  background-size: 850px;
+
   margin:0;
   padding:0;
-  /* transform: scale(1.75);
-  transform-origin: left; */
   overflow: hidden;
+  background-image: url("../images/backgrounds/classic.jpeg");
+  background-size: cover;
   
 }
 
@@ -45,11 +42,26 @@ div.content {
 
 .bottom {
   position: fixed;
-  top: 80%;
+  top: 60%;
   left: 0;
-  z-index: 999;
   width: 100%;
   height: 23px;
+}
+
+.win {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* position: absolute; */
+  font-size: 60px;
+  position: asbolute;
+  color:rgba(255, 255, 255, 1);
+  opacity: 0;
+  font-family: helvetica, arial, sans-serif;
+  z-index: -1;
+  user-select: none;
+
+
 }
 
 .game {
@@ -69,6 +81,16 @@ div.content {
   /* position: absolute; */
   position: asbolute;
   top: 10%;
+
+}
+
+.theme {
+  padding: 10px;
+  margin: 5px;
+}
+
+.theme:hover {
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .2);
 
 }
 
@@ -98,8 +120,14 @@ width: 100%;
 
 .btn:hover {
   border: 1px solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, .5), 0 0 10px rgba(255, 255, 255, .2);
   outline-color: rgba(255, 255, 255, 0);
   outline-offset: 15px;
   text-shadow: 1px 1px 2px #427388; 
 }
+
+.card.revealed:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: scale(1.05,1.05);
+
+ }
