@@ -3,7 +3,6 @@ class Card {
         this.suit = suit;
         this.value = value;
         this.rank = ranks[value];
-        //this.imgUrl = `../images/${suit.toLowerCase()}/${suit.toLowerCase()}-${['A', 'J', 'Q', 'K'].includes(value) ? value : `r${value}`}.svg`
         this.class = `${suit.toLowerCase()[0]}${value}`;
         this.revealed = false;
         this.isRed = ['Diamonds', 'Hearts'].includes(suit) ? true : false;
@@ -108,7 +107,7 @@ function renderPiles() {
         document.querySelector('#waste').innerHTML = `<span class='card ${cardsInWaste[cardsInWaste.length-1].class} revealed' draggable='true'  ondragstart="drag(event)"></span>`
 
     } else {
-        document.querySelector('#waste').firstElementChild.classList = 'card outline'
+        document.querySelector('#waste').innerHTML = `<span class='card outline'></span>`
     }
 
     for (pile in cardsInFoundation) {
