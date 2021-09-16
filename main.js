@@ -346,7 +346,7 @@ function changeTheme(value) {
 
     sheetsEl[1].href = `css/cardstarter-${value}.css`;
 
-    document.querySelector('body').style.backgroundImage = `url("./images/backgrounds/${value}.jpeg")`
+    document.querySelector('body').style.backgroundImage = `url("./images/backgrounds/${value}.png")`
 
 }
 

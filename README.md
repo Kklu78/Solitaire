@@ -16,7 +16,7 @@ Solitaire is a tabletop game that anyone an play by themselves.  The card versio
 - Building: using the cards available, you can stack cards of descending value and alternating color under any other visible card on the board.  This way, you are able to unblock cards that are underneath each tableau pile so they can be revealed.
 - If there are no more moves available on the tableau, you can utilize the stock pile by flipping over the top card.  This card can be played onto the foundation or tableau.  If not, you can continue to flip over cards from the stock but are only able to use the card on top.
 - Space: a vacancy created on the tableau by clearing all the cards from that pile.  You are only able to place a King on a space.
-- continue to transfer cards between the stock/tableau to the foundation pile and complete all 4 foundation piles to win!
+- Continue to transfer cards between the stock/tableau to the foundation pile and complete all 4 foundation piles to win!
 
 
 ## Renders
@@ -44,5 +44,5 @@ Drag and drop function with applied game logic
 Link
 
 ## Next steps:
-- End game animations and aesthetics: includes card bouncing animation and sounds such as card shuffles or card draws
-- Game solver function: an algorithm that solves the game as a human would in a methodical way
+- End game animations and aesthetics: includes card bouncing animation and sounds such as card shuffles or card draws.
+- Game solver function: an algorithm that solves the game as a human would in a methodical way.

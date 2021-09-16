@@ -7,8 +7,9 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: url("../images/backgrounds/classic.jpeg");
+  background-image: url("../images/backgrounds/classic.png");
   background-size: cover;
+  zoom: 1.75;
 }
 
 .content {

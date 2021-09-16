@@ -38,7 +38,7 @@
     box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); }
   .card.outline {
     background-image: none;
-    background-color: rgba(195, 195, 195, 0.221);
+    background-color: rgba(255, 255, 255, 0.584);
     border: 0.15em dashed #000000; }
 
 .card.diamonds.A,
