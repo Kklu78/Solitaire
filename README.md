@@ -1,5 +1,5 @@
 # Solitaire
-Solitaire is a tabletop game that anyone an play by themselves.  The card version goes back to the late 1700s across Northern Europe and Scandinavia.  Another name for the card version of the game is Patience which is definitely a requirement	 for completing the game.
+Solitaire is a tabletop game that anyone an play by themselves.  The card version goes back to the late 1700s across Northern Europe and Scandinavia.  Another name for the card version of the game is Patience which is definitely a requirement for completing the game.
 
 ## How to play
 ### Introduction
@@ -12,7 +12,7 @@ Solitaire is a tabletop game that anyone an play by themselves.  The card versio
 - The waste pile is the pile next to the stock pile and starts out empty.
 
 ### Gameplay
-- Only face up cards are able to be moved throughout the board
+- Only face up cards are able to be moved throughout the board.
 - Building: using the cards available, you can stack cards of descending value and alternating color under any other visible card on the board.  This way, you are able to unblock cards that are underneath each tableau pile so they can be revealed.
 - If there are no more moves available on the tableau, you can utilize the stock pile by flipping over the top card.  This card can be played onto the foundation or tableau.  If not, you can continue to flip over cards from the stock but are only able to use the card on top.
 - Space: a vacancy created on the tableau by clearing all the cards from that pile.  You are only able to place a King on a space.
