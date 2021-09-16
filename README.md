@@ -41,7 +41,7 @@ Drag and drop function with applied game logic
 - CSS for the card library and styling
 
 ## Getting Started:
-Link
+[Link to PLay](https://kklu78.github.io/Solitaire/)
 
 ## Next steps:
 - End game animations and aesthetics: includes card bouncing animation and sounds such as card shuffles or card draws.
